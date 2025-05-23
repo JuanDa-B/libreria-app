@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: libreria-app-backend
+    runtime: node
+    buildCommand: npm install && cd client && npm install --legacy-peer-deps && NODE_OPTIONS=--openssl-legacy-provider npm run build && cd ..
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: DATABASE_URL
+        sync: false 
