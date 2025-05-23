@@ -4,7 +4,7 @@
   "description": "Aplicación para gestión de librería",
   "main": "server.js",
   "scripts": {
-    "start": "npm install && cd client && npm install --legacy-peer-deps && NODE_OPTIONS=--openssl-legacy-provider npm run build && cd .. && node server.js",
+    "start": "node server.js",
     "server": "nodemon server.js",
     "client": "cd client && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
